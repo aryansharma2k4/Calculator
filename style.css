@@ -54,9 +54,7 @@ body {
       background-color: #a5a5a5;
   }
   
-  .btn.especial:hover {
-      background-color: #c8c8c8;
-  }
+
   
   .btn.number, .btn.decimal {
       color: #ffffff;
@@ -64,9 +62,6 @@ body {
       background-color: #343434;
   }
   
-  .btn.number:hover, .btn.decimal:hover {
-      background-color: #575757;
-  }
   
   .operator {
       color: #ffffff;
@@ -74,9 +69,6 @@ body {
       background-color: #ffad32;
   }
   
-  .operator:hover {
-      background-color: #ffad32;
-  }
   
   #zero {
       border-radius: 50px;
