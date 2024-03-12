@@ -1,11 +1,15 @@
 body {
       background-color: #2a2626;
+      margin : 0px;
+      padding: 0px;
   }
   
   main {
       display: flex;
       justify-content: center;
-      padding: 4%;
+      align-items: flex-start;
+      padding: 0%;
+      height: 100vh;
   }
 
   .container {
@@ -15,9 +19,8 @@ body {
       border-radius: 45px;
       width: 410px;
       height: 600px;
-      margin-top: 46px;
+      margin-top: 0px;
       margin-right: -5px;
-      position: absolute;
   }
   
   .panel {
