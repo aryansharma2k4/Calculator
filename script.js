@@ -40,28 +40,28 @@ let op =0;
 let plus = document.querySelector('#addition');
 plus.addEventListener('click',function(){
       styleChange(plus);
-      frpt = parseInt(res.innerHTML);
+      frpt = parseFloat(res.innerHTML);
       res.innerHTML = '';
       op = 1;
 })
 let subtraction = document.querySelector('#subtraction');
 subtraction.addEventListener('click',function(){
       styleChange(subtraction);
-      frpt = parseInt(res.innerHTML);
+      frpt = parseFloat(res.innerHTML);
       res.innerHTML = '';
       op = 2;
 })
 let multiplication = document.querySelector('#multiplication');
 multiplication.addEventListener('click',function(){
       styleChange(multiplication);
-      frpt = parseInt(res.innerHTML);
+      frpt = parseFloat(res.innerHTML);
       res.innerHTML = '';
       op =3;
 })
 let division = document.querySelector('#division');
 division.addEventListener('click',function(){
       styleChange(division);
-      frpt = parseInt(res.innerHTML);
+      frpt = parseFloat(res.innerHTML);
       res.innerHTML = '';
       op =4;
 })
@@ -73,7 +73,7 @@ sign.addEventListener('click',function(){
             sign.style.backgroundColor = '';
       }, 200);
       res.innerHTML = -res.innerHTML;
-      frpt = parseInt(res.innerHTML);
+      frpt = parseFloat(res.innerHTML);
 })
 let percentage = document.querySelector('#percentage');
 percentage.addEventListener('click',function(){
@@ -82,13 +82,13 @@ percentage.addEventListener('click',function(){
       setTimeout(() => {
             percentage.style.backgroundColor = '';
       }, 200);
-      frpt = parseInt(res.innerHTML);
+      frpt = parseFloat(res.innerHTML);
       res.innerHTML = frpt/100;
 })
 document.addEventListener('keydown', function(event) {
       if (event.key === '+') {
              styleChange(plus);
-             frpt = parseInt(res.innerHTML);
+             frpt = parseFloat(res.innerHTML);
              res.innerHTML = '';
       op = 1;
       }
@@ -96,7 +96,7 @@ document.addEventListener('keydown', function(event) {
 document.addEventListener('keydown', function(event) {
       if (event.key === '-') {
             styleChange(subtraction);
-             frpt = parseInt(res.innerHTML);
+             frpt = parseFloat(res.innerHTML);
              res.innerHTML = '';
       op = 2;
       }
@@ -104,7 +104,7 @@ document.addEventListener('keydown', function(event) {
 document.addEventListener('keydown', function(event) {
       if (event.key === '*') {
             styleChange(multiplication);
-             frpt = parseInt(res.innerHTML);
+             frpt = parseFloat(res.innerHTML);
              res.innerHTML = '';
       op = 3;
       }
@@ -112,7 +112,7 @@ document.addEventListener('keydown', function(event) {
 document.addEventListener('keydown', function(event) {
       if (event.key === '/') {
             styleChange(division);
-             frpt = parseInt(res.innerHTML);
+             frpt = parseFloat(res.innerHTML);
              res.innerHTML = '';
       op = 4;
       }
@@ -375,27 +375,33 @@ document.addEventListener('keydown', function(event) {
             keyStyleChange();
       }
 });
-let scpt = 0;
 const equal = document.querySelector('#equal');
 
+let scpt =0;
+
 function calculateResult() {
-    scpt = parseInt(res.innerHTML);
+    scpt = parseFloat(res.innerHTML);
     if (op == 1) {
-        res.innerHTML = frpt + scpt;
-        frpt = parseInt(res.innerHTML);
-    } else if (op == 2) {
-        res.innerHTML = frpt - scpt;
-        frpt = parseInt(res.innerHTML);
-    } else if (op == 3) {
-        res.innerHTML = frpt * scpt;
-        frpt = parseInt(res.innerHTML);
-    } else if (op == 4) {
-        res.innerHTML = frpt / scpt;
-        frpt = parseInt(res.innerHTML);
+      res.innerHTML = frpt + scpt;
+      frpt = parseFloat(res.innerHTML);
     }
+    else if (op == 2) {
+      res.innerHTML = frpt - scpt;
+      frpt = parseFloat(res.innerHTML);
+    }
+    else if (op == 3) {
+      res.innerHTML = frpt * scpt;
+      frpt = parseFloat(res.innerHTML);
+    }
+    else if (op == 4) {
+      res.innerHTML = frpt / scpt;
+      frpt = parseFloat(res.innerHTML);
+    }
+
 }
 
 equal.addEventListener('click', calculateResult);
+scpt = parseFloat(res.innerHTML);
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
